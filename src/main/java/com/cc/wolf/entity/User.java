@@ -16,7 +16,7 @@ public class User implements Serializable {
     private int id;
     @TableField(condition = SqlCondition.LIKE)
     private String userName;
-    @TableField("pass_word")  // 实体类中的成员名称和表中字段名称不一致时候可用
+    @TableField("pass_word")  // 实体类中的成员名称和表中字段名称不一致时候可用，这里是一致的，因为大写转数据库的下划线
     private String passWord;
     @TableField(condition = SqlCondition.LIKE)
     private String nickName;

@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 @Data
-@TableName("role_temple")
-public class RoleTemple implements Serializable {
+@TableName("role_template")
+public class RoleTemplate implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
     private int people;

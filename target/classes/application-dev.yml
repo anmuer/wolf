@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     username: root
-    password: 12345678
+    password: ZAQ1.2wsx
     url: jdbc:mysql://127.0.0.1:3306/wolf?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
       # 初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时
       initialSize: 1
@@ -68,8 +68,6 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       table-underline: true
-
-
     refresh: true
   configuration:
     #配置返回数据库(column下划线命名&&返回java实体是驼峰命名)，自动匹配无需as（没开启这个，SQL需要写as： select user_id as userId）

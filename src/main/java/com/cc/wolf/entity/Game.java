@@ -13,7 +13,7 @@ public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
     private int roomId;
-    private int gameTempleId;
+    private int roleTemplateId;
     @TableField(condition = SqlCondition.LIKE)
     private String gameName;
     private String victoryRole;
@@ -22,4 +22,5 @@ public class Game implements Serializable {
     private Timestamp createTime;
     private Timestamp startTime;
     private Timestamp endTime;
+    private String spend;
 }
