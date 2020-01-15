@@ -5,6 +5,7 @@ import com.cc.wolf.ApiResponse;
 import com.cc.wolf.entity.Game;
 import com.cc.wolf.service.GameService;
 import com.cc.wolf.utils.StatusCode;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/wolf/game")
+@Api
 public class GameController {
 
     @Autowired
