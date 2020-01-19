@@ -28,3 +28,4 @@ hs_err_pid*
 target/classes/META-INF/
 target/generated-sources/
 target/generated-test-sources/
+target/classes/sql/

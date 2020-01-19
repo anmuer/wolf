@@ -13,8 +13,8 @@ import java.sql.Timestamp;
 @ApiModel(value = "Gold")
 public class Gold implements Serializable {
     private static final long serialVersionUID = 1L;
-    private int id;
-    private int userId;
+    private Integer id;
+    private Integer userId;
     @TableField(condition = SqlCondition.LIKE)
     private String goldName;
     private String voice;

@@ -13,9 +13,9 @@ import java.sql.Timestamp;
 @ApiModel(value = "Game")
 public class Game implements Serializable {
     private static final long serialVersionUID = 1L;
-    private int id;
-    private int roomId;
-    private int roleTemplateId;
+    private Integer id;
+    private Integer roomId;
+    private Integer roleTemplateId;
     @TableField(condition = SqlCondition.LIKE)
     private String gameName;
     private String victoryRole;

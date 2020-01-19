@@ -1,4 +1,4 @@
-package com.cc.wolf.swagger;
+package com.cc.wolf.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

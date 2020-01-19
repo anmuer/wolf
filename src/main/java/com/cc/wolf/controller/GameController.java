@@ -1,5 +1,7 @@
 package com.cc.wolf.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cc.wolf.ApiResponse;
 import com.cc.wolf.entity.Game;
@@ -21,8 +23,17 @@ public class GameController {
 
 
     @GetMapping
-    public ApiResponse getGames(Page<Game> game){
-        return new ApiResponse(gameService.page(game));
+    public ApiResponse getGames(Game game, Integer pageNo, Integer pageSize){
+        if(null==pageNo || pageNo<1){
+            pageNo = 1;
+        }
+        if(null==pageSize || pageSize<1){
+            pageSize = 10;
+        }
+        IPage<Game> page = new Page<>(pageNo,pageSize);
+        QueryWrapper<Game> queryWrapper = new QueryWrapper<>();
+        queryWrapper.setEntity(game);
+        return new ApiResponse(gameService.page(page,queryWrapper));
     }
 
     @PostMapping

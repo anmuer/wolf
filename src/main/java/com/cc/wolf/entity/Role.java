@@ -13,7 +13,7 @@ import java.sql.Timestamp;
 @ApiModel(value = "Role")
 public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
-    private int id;
+    private Integer id;
     @TableField(condition = SqlCondition.LIKE)
     private String roleName;
     @TableField(condition = SqlCondition.LIKE)

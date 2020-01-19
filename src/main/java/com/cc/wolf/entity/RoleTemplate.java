@@ -14,8 +14,8 @@ import java.sql.Timestamp;
 @ApiModel(value = "RoleTemplate")
 public class RoleTemplate implements Serializable {
     private static final long serialVersionUID = 1L;
-    private int id;
-    private int people;
+    private Integer id;
+    private Integer people;
     @TableField(condition = SqlCondition.LIKE)
     private String schema;
     private Timestamp createTime;
